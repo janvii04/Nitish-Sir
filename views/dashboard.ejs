@@ -1,0 +1,110 @@
+<%- include("./partials/header.ejs"); %>
+
+<div class="cards">
+  <div class="card user-card">
+    <i class="fas fa-users" style="font-size: 30px; color: white"></i>
+    <a href="/user" style="text-decoration: none">
+      <center><h3 style="color: black">Users</h3></center>
+    </a>
+  </div>
+  <div class="card user-card">
+    <i class="fas fa-users" style="font-size: 30px; color: white"></i>
+    <a href="/changePassword" style="text-decoration: none">
+      <center><h3 style="color: black">changePassword</h3></center>
+    </a>
+  </div>
+
+</div>
+<style>
+body {
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: lightgray;
+  margin: 0;
+  color: #333;
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0 auto;
+}
+
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: gray;
+  padding: 10px 20px;
+}
+
+.cards {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.card {
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-card {
+  background: lightsteelblue;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 20%;
+  background: gray;
+  padding: 0;
+}
+
+.dashboard {
+  max-width: 1300px;
+  margin: 80px auto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-container input[type="search"] {
+  width: 100%;
+  max-width: 200px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+}
+
+</style>
+
+<%- include("./partials/footer.ejs"); %>

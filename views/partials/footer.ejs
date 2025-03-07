@@ -1,0 +1,34 @@
+</body>
+
+
+
+</html>
+<script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentPath = window.location.pathname;
+  
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active');
+      }
+    });
+
+    document.getElementById('search').addEventListener('input', function () {
+    const searchValue = this.value.toLowerCase(); 
+    const rows = document.querySelectorAll('table tr'); 
+
+    rows.forEach((row, index) => {
+      if (index === 0) return; 
+      const nameCell = row.cells[2]; 
+      const nameText = nameCell.textContent.toLowerCase();
+
+      if (nameText.includes(searchValue)) {
+        row.style.display = ''; 
+      } else {
+        row.style.display = 'none'; 
+      }
+    });
+  });
+
+
+  </script>

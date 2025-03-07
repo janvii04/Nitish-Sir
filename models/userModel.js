@@ -13,8 +13,6 @@ module.exports = (Sequelize, sequelize, DataTypes) => {
                 allowNull: true,
                 defaultValue: null,
             },
-            
-            
         },
         {
             tableName: "user",
